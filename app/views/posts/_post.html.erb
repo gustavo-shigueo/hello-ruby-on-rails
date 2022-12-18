@@ -1,5 +1,7 @@
 <div id="<%= dom_id post %>">
-  <h2><%= post.title %></h1>
+  <h2><%= post.title %></h2>
+  <h4>Posted by: <%= link_to post.user.name, user_path(post.user) %></h4>
+  <p><%= pluralize post.views, 'view' %></p>
 
   <div>
     <p><%= post.body %></p>
